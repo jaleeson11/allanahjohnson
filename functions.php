@@ -139,7 +139,6 @@ add_action( 'widgets_init', 'allanahjohnson_widgets_init' );
  */
 function allanahjohnson_scripts() {
 	wp_enqueue_style( 'allanahjohnson-style', get_stylesheet_uri(), array(), ALLANAHJOHNSON_VERSION );
-	wp_style_add_data( 'allanahjohnson-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'allanahjohnson-navigation', get_template_directory_uri() . '/js/navigation.js', array(), ALLANAHJOHNSON_VERSION, true );
 
