@@ -1,0 +1,11 @@
+.site-footer {
+    padding-top: var(--space-lg);
+    background-color: #fff;
+    text-align: center;
+}
+
+@include media-breakpoint-up(md) {
+	.site-footer {
+        padding-top: var(--space-xl);
+    }
+}
