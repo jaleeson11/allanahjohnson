@@ -20,15 +20,15 @@
 }
 
 @font-face {
-    font-family: 'DMSansDisplay-Regular';
-    src: url('DMSansDisplay-Regular.woff') format('woff');
+    font-family: 'DMSerifDisplay-Regular';
+    src: url('DMSerifDisplay-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'DMSansDisplay-Italic';
-    src: url('DMSansDisplay-Italic.woff') format('woff');
+    font-family: 'DMSerifDisplay-Italic';
+    src: url('DMSerifDisplay-Italic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
