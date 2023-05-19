@@ -23,9 +23,9 @@ function allanahjohnson_custom_header_setup() {
 			'allanahjohnson_custom_header_args',
 			array(
 				'default-image'      => '',
-				'default-text-color' => '000000',
-				'width'              => 1000,
-				'height'             => 250,
+				'default-text-color' => 'FFFFFF',
+				'width'              => 1200,
+				'height'             => 500,
 				'flex-height'        => true,
 				'wp-head-callback'   => 'allanahjohnson_header_style',
 			)

@@ -140,8 +140,9 @@ add_action( 'widgets_init', 'allanahjohnson_widgets_init' );
 function allanahjohnson_scripts() {
 	wp_enqueue_style( 'allanahjohnson-fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', array(), ALLANAHJOHNSON_VERSION );
 	wp_enqueue_style( 'allanahjohnson-style', get_stylesheet_uri(), array(), ALLANAHJOHNSON_VERSION );
+	wp_enqueue_style( 'dashicons' );
 
-	wp_enqueue_script( 'allanahjohnson-navigation', get_template_directory_uri() . '/js/navigation.js', array(), ALLANAHJOHNSON_VERSION, true );
+	wp_enqueue_script( 'allanahjohnson-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), ALLANAHJOHNSON_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
