@@ -2,20 +2,33 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
+	border-radius: 100px;
+	border: 2px solid;
 	border-color: $color__border-button;
-	border-radius: 3px;
 	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	color: $color__text-main;
+	line-height: 1.15;
+	font-family: 'DMSans-Bold';
+	text-align: center;
+	padding: var(--space-sm) var(--space-md);
+	min-width: 10ch;	
+	min-height: 2.5rem;
+	cursor: pointer;
+	touch-action: manipulation;
+	transition: color ease .2s;
 
 	&:hover {
 		border-color: $color__border-button-hover;
+		color: $color__brand-green;
+	}
+
+	&:focus:not(:focus-visible) {
+		outline: none;
 	}
 
 	&:active,
 	&:focus {
-		border-color: $color__border-button-focus;
+		outline: 2px solid $color__outline-button-focus;
+		outline-offset: 2px;
 	}
 }
