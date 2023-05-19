@@ -1,0 +1,9 @@
+.site-main {
+    padding-top: var(--space-lg);
+}
+
+@include media-breakpoint-up(md) {
+	.site-main {
+        padding-top: var(--space-xl);
+    }
+}
