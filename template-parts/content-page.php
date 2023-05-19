@@ -17,6 +17,7 @@
 
 		<?php allanahjohnson_post_thumbnail(); ?>
 
+		<?php if ( ! empty( get_the_content() ) ) : ?>
 		<div class="entry-content">
 			<?php
 			the_content();
@@ -29,6 +30,7 @@
 			);
 			?>
 		</div><!-- .entry-content -->
+		<?php endif; ?>
 
 		<?php if ( get_edit_post_link() ) : ?>
 			<footer class="entry-footer">
