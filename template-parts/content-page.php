@@ -10,14 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="container">
+	<?php if ( ! is_front_page() ) : ?>
 		<header class="entry-header">
-			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
+	<?php endif; ?>
 
-		<?php allanahjohnson_post_thumbnail(); ?>
+	<?php allanahjohnson_post_thumbnail(); ?>
 
-		<?php if ( ! empty( get_the_content() ) ) : ?>
+	<?php if ( ! empty( get_the_content() ) ) : ?>
 		<div class="entry-content">
 			<?php
 			the_content();
@@ -30,29 +31,28 @@
 			);
 			?>
 		</div><!-- .entry-content -->
-		<?php endif; ?>
+	<?php endif; ?>
 
-		<?php if ( get_edit_post_link() ) : ?>
-			<footer class="entry-footer">
-				<?php
-				edit_post_link(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'allanahjohnson' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						wp_kses_post( get_the_title() )
+	<?php if ( get_edit_post_link() ) : ?>
+		<footer class="entry-footer">
+			<?php
+			edit_post_link(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'allanahjohnson' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
 					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-				?>
-			</footer><!-- .entry-footer -->
-		<?php endif; ?>
-	</div><!-- .container -->
+					wp_kses_post( get_the_title() )
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+			?>
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
