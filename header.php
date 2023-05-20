@@ -28,15 +28,16 @@
 	<header id="masthead" class="site-header">
 		<div class="custom-header">
 			<?php
-			$header_image = get_header_image();
+			$header_image  = get_header_image();
 			$default_image = get_template_directory_uri() . '/assets/images/custom-header-default.jpg';
 
-			if ( ! empty( $header_image ) ) : ?>
-			<div class="custom-header-image" style="background-image: url(<?php echo esc_url( $header_image ); ?>);"></div>
-			<?php else : ?><!-- .custom-header-image -->
-			<div class="custom-header-image" style="background-image: url(<?php echo esc_url( $default_image ); ?>);"></div>
-			<?php endif; ?><!-- .custom-header-image -->
-			
+			if ( ! empty( $header_image ) ) :
+				?>
+				<div class="custom-header-image" style="background-image: url(<?php echo esc_url( $header_image ); ?>);"></div><!-- .custom-header-image -->
+				<?php else : ?>
+				<div class="custom-header-image" style="background-image: url(<?php echo esc_url( $default_image ); ?>);"></div><!-- .custom-header-image -->
+			<?php endif; ?>
+
 			<div class="site-branding">
 				<div class="container">
 					<?php
