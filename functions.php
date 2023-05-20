@@ -177,3 +177,14 @@ require get_template_directory() . '/inc/customizer.php';
 // 	require get_template_directory() . '/inc/jetpack.php';
 // }
 
+/**
+ * Modifies archive title.
+ */
+function allanahjohnson_archive_title() {
+	if ( is_post_type_archive() ) {
+		$title = post_type_archive_title( '', false );
+	}
+
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'allanahjohnson_archive_title' );
