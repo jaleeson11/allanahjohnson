@@ -7,16 +7,20 @@
     max-width: 100%;
     margin-bottom: var(--space-lg);
 
-    &__image {
+    &__image,
+    &__image-placeholder {
+        width: 11.5rem;
+        height: 11.5rem;
         border-radius: 50%;
-        width: 100%;
+    }
+
+    &__image {
+        object-fit: cover;
     }
 
     &__image-placeholder {
         display: block;
         position: relative;
-        width: 11.5rem;
-        height: 11.5rem;
         border-radius: 50%;
         background-color: $color__brand-primary-light;
 
@@ -38,6 +42,8 @@
     &__intro {
         margin-top: 0;
         margin-bottom: var(--space-lg);
+        font-family: 'DMSans-Italic';
+        font-size: .9rem;
     }
 }
 
