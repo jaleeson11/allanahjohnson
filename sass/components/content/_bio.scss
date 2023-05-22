@@ -3,7 +3,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 20rem;
+    padding: var(--space-md) var(--space-sm);
+    max-width: 100%;
+    margin-bottom: var(--space-lg);
 
     &__image {
         border-radius: 50%;
@@ -13,8 +15,8 @@
     &__image-placeholder {
         display: block;
         position: relative;
-        width: 12rem;
-        height: 12rem;
+        width: 11.5rem;
+        height: 11.5rem;
         border-radius: 50%;
         background-color: $color__brand-primary-light;
 
@@ -31,5 +33,18 @@
 
     &__heading {
         margin-top: var(--space-lg);
+    }
+
+    &__intro {
+        margin-top: 0;
+        margin-bottom: var(--space-lg);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .bio {
+        max-width: 19rem;
+        border: thin solid $color__brand-primary-light;
+        border-radius: 1.5rem;
     }
 }
