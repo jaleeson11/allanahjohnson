@@ -199,3 +199,11 @@ function allanahjohnson_archive_title() {
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'allanahjohnson_archive_title' );
+
+/**
+ * Adds ellipses to end of post excerpt.
+ */
+function allanahjohnson_excerpt_more() {
+	return '...';
+}
+add_filter( 'excerpt_more', 'allanahjohnson_excerpt_more' );
