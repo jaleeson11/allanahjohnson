@@ -91,8 +91,7 @@ get_header();
 			?>
 
 			<?php if ( $image_url ) : ?>
-				<img src="<?php echo esc_url( wp_get_attachment_image_url( $image
-				, 'medium' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>" class="bio__image">
+				<img src="<?php echo esc_url( wp_get_attachment_image_url( $image_id, 'medium' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>" class="bio__image">
 			<?php else : ?>
 				<span class="bio__image-placeholder"></span>
 			<?php endif; ?>
