@@ -63,7 +63,7 @@
 		<nav id="site-navigation" class="main-navigation">
 			<div class="container">
 				<div class="main-navigation__inner">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'allanahjohnson' ); ?></button>
+					<span class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" role="button"><?php esc_html_e( 'Menu', 'allanahjohnson' ); ?></span>
 					<?php
 					wp_nav_menu(
 						array(
@@ -77,5 +77,9 @@
 			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
-	<div class="content-wrapper">
+	
+	<?php if ( ! is_front_page() ) : ?>
+		<div class="content-wrapper">
+	<?php else : ?>
+		<div class="content-wrapper content-wrapper--fp">
+	<?php endif; ?>

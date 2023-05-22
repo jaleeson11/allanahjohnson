@@ -19,4 +19,39 @@
 
 .content-wrapper {
 	background-color: #fff;
+	padding: var(--space-xl) 0;
+
+	&--fp {
+		.container {
+			display: flex;
+			flex-direction: column-reverse;
+	
+			aside {
+				align-self: center;
+			}
+		}
+
+		.service {
+			padding: var(--space-lg) 0;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.content-wrapper {
+        padding: var(--space-xxl) 0;
+
+		&--fp .container {
+			flex-direction: row;
+
+			.site-main {
+				flex: 1;
+			}
+		
+			aside {
+				margin-left: var(--space-xl);
+				align-self: flex-start;
+			}
+		}
+    }
 }

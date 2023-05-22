@@ -15,9 +15,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<div class="container">
 
-		<div class="container">
+		<main id="primary" class="site-main">
 
 			<?php
 			if ( have_posts() ) :
@@ -65,7 +65,7 @@ get_header();
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<header class="entry-header">
-							<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+							<?php the_title( '<h2 class="entry-title mt-0">', '</h2>' ); ?>
 						</header><!-- .entry-header -->
 
 						<div class="entry-content">
@@ -77,12 +77,14 @@ get_header();
 			endif;
 			?>
 
-		</div><!-- .container -->
+			<a href="<?php the_permalink( get_page_by_path( 'about-me' ) ); ?>" class="site-button">
+				<?php echo esc_html__( 'View Services In More Detail', 'allanahjohnson' ); ?>
+			</a>
 
-	</main><!-- #main -->
+		</main><!-- #main -->
 
-	<aside>
-		<div class="bio">
+		<aside>
+			<div class="bio">
 			<?php
 			$image_url = get_theme_mod( 'bio_image' );
 			$image_id  = attachment_url_to_postid( $image_url );
@@ -94,17 +96,19 @@ get_header();
 			<?php else : ?>
 				<span class="bio__image-placeholder"></span>
 			<?php endif; ?>
-			<h2 class="bio__heading h3">
-				<?php echo esc_html__( get_theme_mod( 'bio_heading' ), 'allanahjohnson' ); ?>
-			</h2>
-			<p class="bio__intro">
-				<?php echo esc_html__( get_theme_mod( 'bio_intro' ), 'allanahjohnson' ); ?>
-			</p>
-			<a href="<?php the_permalink( get_page_by_path( 'about-me' ) ); ?>" class="site-button">
-				<?php echo esc_html__( 'More About Me', 'allanahjohnson' ); ?>
-			</a>
-		</div>
-	</aside>
+				<h2 class="bio__heading h3">
+					<?php echo esc_html__( get_theme_mod( 'bio_heading' ), 'allanahjohnson' ); ?>
+				</h2>
+				<p class="bio__intro">
+					<?php echo esc_html__( get_theme_mod( 'bio_intro' ), 'allanahjohnson' ); ?>
+				</p>
+				<a href="<?php the_permalink( get_page_by_path( 'about-me' ) ); ?>" class="site-button">
+					<?php echo esc_html__( 'More About Me', 'allanahjohnson' ); ?>
+				</a>
+			</div><!-- .bio -->
+		</aside>
+
+	</div><!-- .container -->
 
 <?php
 get_footer();
