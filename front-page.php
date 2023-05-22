@@ -50,6 +50,31 @@ get_header();
 				get_template_part( 'template-parts/content', 'none' );
 
 			endif;
+
+			$services = new WP_Query(
+				array(
+					'post_type'		 => 'service',
+					'posts_per_page' => '3',
+				)
+			);
+
+			if ( $services->have_posts() ) :
+				while ( $services->have_posts() ) :
+					$services->the_post();
+					?>
+
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<header class="entry-header">
+							<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+						</header><!-- .entry-header -->
+
+						<div class="entry-content">
+							<?php the_excerpt( '<p class="entry-excerpt">', '</p>' ); ?>
+						</div><!-- .entry-content -->
+					</article><!-- #post-<?php the_ID(); ?> -->
+					<?php
+				endwhile;
+			endif;
 			?>
 
 		</div><!-- .container -->
