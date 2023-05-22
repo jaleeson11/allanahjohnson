@@ -1,11 +1,42 @@
 .site-footer {
-    padding-top: var(--space-lg);
-    background-color: #fff;
-    text-align: center;
+    padding-top: var(--space-xl);
+    background-color: $color__background;
+    border-top: thin solid $color__brand-primary-light;
+
+    .site-footer__col {
+        + * {
+            margin-top: var(--space-xl);
+        }
+
+        .wp-block-heading {
+            margin-top: 0;
+            font-size: var(--font-size-h4);
+        }
+    }
+
+    .site-footer__copyright {
+        display: block;
+        text-align: center;
+        font-size: .8rem;
+        padding: var(--space-lg) 0 var(--space-sm);
+    }
 }
 
 @include media-breakpoint-up(md) {
 	.site-footer {
-        padding-top: var(--space-xl);
+        padding-top: var(--space-xxl);
+
+        .site-footer__inner {
+            display: flex;
+            justify-content: space-between;
+
+            .site-footer__col {
+                flex: 1;
+                
+                + * {
+                    margin-top: 0;
+                }
+            }
+        }
     }
 }

@@ -12,21 +12,26 @@
 ?>
 	</div><!-- .content-wrapper -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'allanahjohnson' ) ); ?>">
+	<footer class="site-footer">
+		<div class="container">
+			<div class="site-footer__inner">
+				<div class="site-footer__col">
+					<?php dynamic_sidebar( 'sidebar-footer-1' ); ?>
+				</div>
+				<div class="site-footer__col">
+					<?php dynamic_sidebar( 'sidebar-footer-2' ); ?>
+				</div>
+			</div>
+			<span class="site-footer__copyright">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'allanahjohnson' ), 'WordPress' );
+				echo esc_html( '&copy; Copyright ' );
+				echo esc_html( date( 'Y ' ) );
+				echo esc_html( get_option( 'blogname' ) );
+				echo esc_html( '. All Rights Reserved' );
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'allanahjohnson' ), 'allanahjohnson', '<a href="https://joeleeson.com">Joe Leeson</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+			</span><!-- .site-copyright -->
+		</div><!-- .container -->
+	</footer><!-- .site-footer -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
