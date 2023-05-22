@@ -59,3 +59,81 @@ function allanahjohnson_customize_preview_js() {
 	wp_enqueue_script( 'allanahjohnson-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), ALLANAHJOHNSON_VERSION, true );
 }
 add_action( 'customize_preview_init', 'allanahjohnson_customize_preview_js' );
+
+/**
+ * Adds custom customiser sections.
+ * 
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object. 
+ */
+function allanahjohnson_custom_sections( $wp_customize ) {
+	$wp_customize->add_panel(
+		'theme_options',
+		array(
+			'title'       => 'Theme Options',
+			'description' => 'Theme modifications for custom content can be done here',
+		)
+	);
+
+	$wp_customize->add_section(
+		'bio',
+		array(
+			'title' 	  => 'Bio',
+			'panel' 	  => 'theme_options',
+			'description' => 'This section serves as a short personal introduction, enabling you to share relevant information about yourself, your background, and your expertise.'
+		)
+	);
+
+	$wp_customize->add_setting( 'bio_image' );
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'bio_image',
+			array(
+				'section'  => 'bio',
+				'label'    => 'Image',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'bio_heading',
+		array(
+			'default'           => 'Hi There!',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'bio_heading',
+			array(
+				'type'     => 'text',
+				'section'  => 'bio',
+				'label'    => 'Heading',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'bio_intro',
+		array(
+			'default'           => 'I\'m Allanah, a dedicated psychotherapist and counsellor specializing in working with children and adolescents. With a passion for nurturing young minds and guiding them towards emotional well-being, I am here to provide compassionate support and guidance during their unique journeys.',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'bio_intro',
+			array(
+				'type'     => 'textarea',
+				'section'  => 'bio',
+				'label'    => 'Intro',
+			)
+		)
+	);
+}
+add_action( 'customize_register', 'allanahjohnson_custom_sections' );

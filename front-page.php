@@ -81,5 +81,30 @@ get_header();
 
 	</main><!-- #main -->
 
+	<aside>
+		<div class="bio">
+			<?php
+			$image_url = get_theme_mod( 'bio_image' );
+			$image_id  = attachment_url_to_postid( $image_url );
+			?>
+
+			<?php if ( $image_url ) : ?>
+				<img src="<?php echo esc_url( wp_get_attachment_image_url( $image
+				, 'medium' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>" class="bio__image">
+			<?php else : ?>
+				<span class="bio__image-placeholder"></span>
+			<?php endif; ?>
+			<h2 class="bio__heading h3">
+				<?php echo esc_html__( get_theme_mod( 'bio_heading' ), 'allanahjohnson' ); ?>
+			</h2>
+			<p class="bio__intro">
+				<?php echo esc_html__( get_theme_mod( 'bio_intro' ), 'allanahjohnson' ); ?>
+			</p>
+			<a href="<?php the_permalink( get_page_by_path( 'about-me' ) ); ?>" class="site-button">
+				<?php echo esc_html__( 'More About Me', 'allanahjohnson' ); ?>
+			</a>
+		</div>
+	</aside>
+
 <?php
 get_footer();
