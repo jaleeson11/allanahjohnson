@@ -16,7 +16,7 @@
         width: 12rem;
         height: 12rem;
         border-radius: 50%;
-        background-color: #ddd;
+        background-color: $color__brand-primary-light;
 
         &::before {
             content: '\f110';

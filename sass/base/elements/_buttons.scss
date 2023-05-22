@@ -7,7 +7,7 @@ input[type="submit"],
 	border: 2px solid;
 	border-color: $color__border-button;
 	background: $color__background-button;
-	color: $color__text-main;
+	color: $color__brand-primary;
 	line-height: 1.15;
 	font-family: 'DMSans-Bold';
 	text-align: center;
@@ -20,7 +20,7 @@ input[type="submit"],
 
 	&:hover {
 		border-color: $color__border-button-hover;
-		color: $color__brand-green;
+		color: $color__brand-primary-dark;
 	}
 
 	&:focus:not(:focus-visible) {
