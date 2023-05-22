@@ -20,6 +20,13 @@
 }
 
 @font-face {
+    font-family: 'DMSans-Italic';
+    src: url('DMSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'DMSerifDisplay-Regular';
     src: url('DMSerifDisplay-Regular.woff') format('woff');
     font-weight: normal;
