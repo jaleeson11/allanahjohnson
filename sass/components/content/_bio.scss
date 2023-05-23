@@ -4,7 +4,7 @@
     align-items: center;
     text-align: center;
     max-width: 100%;
-    margin-bottom: var(--space-lg);
+    margin-bottom: calc(var(--space-lg) * 2);
 
     &__image,
     &__image-placeholder {
