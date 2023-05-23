@@ -15,17 +15,29 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-	padding: 3px;
+	border: none;
+	border-radius: .2rem;
+	padding: var(--space-sm);
+	background-color: #fff;
+
+	&::placeholder {
+		color: $color__brand-primary-light;
+	}
+
+	&:focus:not(:focus-visible) {
+		outline: none;
+	}
 
 	&:focus {
 		color: $color__text-input-focus;
+		outline: 4px solid $color__brand-primary;
 	}
 }
 
 select {
-	border: 1px solid $color__border-input;
+	border: none;
+	border-radius: .2rem;
+	padding: var(--space-sm);
 }
 
 textarea {
