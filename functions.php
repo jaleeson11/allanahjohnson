@@ -288,3 +288,23 @@ function  allanahjonhson_login_error() {
 	return 'Your username or password is incorrect';
 }
 add_filter( 'login_errors', 'allanahjonhson_login_error' );
+
+/**
+ * Pre-loads fonts.
+ */
+function allanahjonhson_preload_fonts() {
+	$fonts = [
+		'DMSans-Regular',
+		'DMSans-Medium',
+		'DMSans-Bold',
+		'DMSans-Italic',
+		'DMSerifDisplay-Regular',
+		'DMSerifDisplay-Italic',
+	];
+
+	foreach ($fonts as $font) {
+		?>
+		<link rel="preload" href="<?php echo get_template_directory_uri() . '/assets/fonts/' . $font . '.woff' ?>" as="font" type="font/woff" crossorigin>
+		<?php
+	}
+}

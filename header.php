@@ -21,8 +21,11 @@
 		bloginfo( 'name' ); echo ' - '; bloginfo( 'description' );
 	} ?>">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
-	<?php wp_head(); ?>
+	
+	<?php 
+	allanahjonhson_preload_fonts();
+	wp_head(); 
+	?>
 </head>
 
 <body <?php body_class(); ?>>
