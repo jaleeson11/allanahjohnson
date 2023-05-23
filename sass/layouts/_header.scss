@@ -26,16 +26,18 @@
 
     .site-branding {
         align-self: end;
-        padding-bottom: var(--space-xl);
+        padding-bottom: var(--space-lg);
         margin-bottom: var(--space-xl);
 
         .site-title,
         .site-description {
             margin: 0;
         }
+    }
+}
 
-        .site-description {
-            font-size: 1.25rem;
-        }
+@include media-breakpoint-up(md) {
+    .custom-header .site-branding .site-description {
+        font-size: 1.25rem;
     }
 }
