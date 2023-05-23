@@ -25,14 +25,18 @@
 		.container {
 			display: flex;
 			flex-direction: column-reverse;
+
+			.site-main {
+				text-align: center;
+
+				.service {
+					padding: var(--space-lg) 0;
+				}
+			}
 	
 			aside {
 				align-self: center;
 			}
-		}
-
-		.service {
-			padding: var(--space-lg) 0;
 		}
 	}
 }
@@ -46,6 +50,7 @@
 
 			.site-main {
 				flex: 1;
+				text-align: left;
 			}
 		
 			aside {
