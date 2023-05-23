@@ -261,3 +261,22 @@ function allanahjonhson_remove_comments_from_admin_bar() {
     }
 }
 add_action( 'init', 'allanahjonhson_remove_comments_from_admin_bar' );
+
+/**
+ * Disables search functionality.
+ * 
+ * @param $query
+ * @param $error
+ */
+function allanahjonhson_disable_search( $query, $error = true ) {
+	if ( is_search() ) {
+		$query->is_search = false;   
+		$query->query_vars['s'] = false;
+		$query->query['s'] = false;
+
+		if ( $error ) {
+			$query->is_404 = true;
+		}
+	}
+}
+add_action( 'parse_query', 'allanahjonhson_disable_search' ); 
