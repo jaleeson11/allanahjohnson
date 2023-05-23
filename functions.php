@@ -218,3 +218,46 @@ function allanahjohnson_excerpt_more() {
 	return '...';
 }
 add_filter( 'excerpt_more', 'allanahjohnson_excerpt_more' );
+
+/**
+ * Disables comments.
+ */
+function allanahjonhson_disable_comments() {
+	// Redirect any user trying to access comments page
+    global $pagenow;
+     
+    if ( $pagenow === 'edit-comments.php' ) {
+        wp_safe_redirect( admin_url() );
+        exit;
+    }
+ 
+    // Remove comments metabox from dashboard
+    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+ 
+    // Disable support for comments and trackbacks in post types
+    foreach ( get_post_types() as $post_type ) {
+        if ( post_type_supports( $post_type, 'comments' ) ) {
+            remove_post_type_support( $post_type, 'comments' );
+            remove_post_type_support( $post_type, 'trackbacks' );
+        }
+    }
+}
+add_action( 'admin_init', 'allanahjonhson_disable_comments' );
+
+/**
+ * Removes comments page in menu.
+ */
+function allanahjonhson_remove_comments_from_menu() {
+	remove_menu_page( 'edit-comments.php' );
+}
+add_action( 'admin_menu', 'allanahjonhson_remove_comments_from_menu' );
+
+/**
+ * Removes comments links from admin bar.
+ */
+function allanahjonhson_remove_comments_from_admin_bar() {
+	if ( is_admin_bar_showing() ) {
+        remove_action( 'admin_bar_menu', 'wp_admin_bar_comments_menu', 60 );
+    }
+}
+add_action( 'init', 'allanahjonhson_remove_comments_from_admin_bar' );
