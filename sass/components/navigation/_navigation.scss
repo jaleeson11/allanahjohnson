@@ -80,61 +80,64 @@
 
 @media screen and (max-width: 37.5em) {
 	/* Small menu. */
-	.main-navigation .main-navigation__arrow {
-		display: none;
-	}
-
-	.menu-toggle,
-	.main-navigation.toggled ul {
-		display: block;
-	}
-
-	.main-navigation ul.menu {
-		margin-top: var(--space-xl);
-		text-align: center;
-		background-color: #fff;
-		padding: var(--space-sm);
-
-		> li + * {
-			margin-top: var(--space-sm);
-		}
-	}
-	
-	.menu-toggle {
-		display: flex;
-		align-items: center;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		padding: var(--space-xs);
-		cursor: pointer;
-		font-family: $font__secondary;
-
-		.menu-burger {
-			margin-right: var(--space-xxs);
-
-			.menu-bar {
+	.main-navigation {
+		&.toggled {
+			ul {
 				display: block;
-				height: .15rem;
-				width: 1.25rem;
-				background-color: $color__text-main;
-				margin: var(--space-xxs);
+			}
+
+			.menu-toggle .menu-burger span {
+				&:first-child {
+					transform: translateY(calc(var(--space-xxs) + .15rem)) rotate(45deg);
+				}
+		
+				&:nth-child(2) {
+					opacity: 0;
+				}
+		
+				&:last-child {
+					transform: translateY(calc(var(--space-xxs) * -1 - .15rem)) rotate(-45deg);
+				}
 			}
 		}
-	}
 
-	.main-navigation.toggled .menu-toggle .menu-burger span {
-		&:first-child {
-			transform: translateY(calc(var(--space-xxs) + .15rem)) rotate(45deg);
+		.main-navigation__arrow {
+			display: none;
 		}
 
-		&:nth-child(2) {
-			opacity: 0;
+		ul.menu {
+			margin-top: var(--space-xl);
+			text-align: center;
+			background-color: #fff;
+			padding: var(--space-sm);
+
+			> li + * {
+				margin-top: var(--space-sm);
+			}
 		}
 
-		&:last-child {
-			transform: translateY(calc(var(--space-xxs) * -1 - .15rem)) rotate(-45deg);
+		.menu-toggle {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: var(--space-xs);
+			cursor: pointer;
+			font-family: $font__secondary;
+	
+			.menu-burger {
+				margin-right: var(--space-xxs);
+	
+				.menu-bar {
+					display: block;
+					height: .15rem;
+					width: 1.25rem;
+					background-color: $color__text-main;
+					margin: var(--space-xxs);
+				}
+			}
 		}
 	}
 }
