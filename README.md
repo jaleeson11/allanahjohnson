@@ -3,7 +3,7 @@ Allanah Johnson
 
 > A bespoke Wordpress theme based on the [Underscores](https://underscores.me/) starter theme. 
 
-Built for a professional psychotherapist and counselor who specialises in working with children and adolescense.
+Built for a professional psychotherapist and counsellor who specialises in working with children and adolescense.
 
 Installation
 ---------------
