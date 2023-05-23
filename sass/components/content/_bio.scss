@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: var(--space-md) var(--space-sm);
     max-width: 100%;
     margin-bottom: var(--space-lg);
 
@@ -43,14 +42,18 @@
         margin-top: 0;
         margin-bottom: var(--space-lg);
         font-family: 'DMSans-Italic';
-        font-size: .9rem;
     }
 }
 
 @include media-breakpoint-up(md) {
     .bio {
         max-width: 19rem;
+        padding: var(--space-lg) var(--space-sm);
         border: thin solid $color__brand-primary-light;
         border-radius: 1.5rem;
+
+        &__intro {
+            font-size: .9rem;
+        }
     }
 }
