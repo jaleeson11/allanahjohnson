@@ -63,7 +63,14 @@
 		<nav id="site-navigation" class="main-navigation">
 			<div class="container">
 				<div class="main-navigation__inner">
-					<span class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" role="button"><?php esc_html_e( 'Menu', 'allanahjohnson' ); ?></span>
+					<span class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" role="button">
+						<span class="menu-burger">
+							<span class="menu-bar"></span>
+							<span class="menu-bar"></span>
+							<span class="menu-bar"></span>
+						</span>
+						<?php esc_html_e( 'Menu', 'allanahjohnson' ); ?>
+					</span>
 					<?php
 					wp_nav_menu(
 						array(

@@ -5,7 +5,7 @@
 	left: 0;
 	background-color: #fff;
 	height: var(--space-xl);
-	border-bottom: thin solid #ddd;
+	z-index: 1;
 
 	ul {
 		display: none;
@@ -14,12 +14,9 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+			border-radius: .2rem;
+			background-color: #fff;
 
 			ul {
 				left: -999em;
@@ -63,8 +60,15 @@
 	}
 
 	a {
-		display: block;
+		padding: var(--space-xs);
 		font-family: $font__secondary;
+		color: $color__text-main;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__brand-primary;
+		}
 	}
 
 	.current_page_item > a,
@@ -76,7 +80,7 @@
 
 @media screen and (max-width: 37.5em) {
 	/* Small menu. */
-	main-navigation__arrow {
+	.main-navigation .main-navigation__arrow {
 		display: none;
 	}
 
@@ -85,22 +89,53 @@
 		display: block;
 	}
 
-	.menu {
+	.main-navigation ul.menu {
 		margin-top: var(--space-xl);
 		text-align: center;
 		background-color: #fff;
 		padding: var(--space-sm);
 
-		li {
-			line-height: 2;
+		> li + * {
+			margin-top: var(--space-sm);
 		}
 	}
 	
 	.menu-toggle {
+		display: flex;
+		align-items: center;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		padding: var(--space-xs);
+		cursor: pointer;
+		font-family: $font__secondary;
+
+		.menu-burger {
+			margin-right: var(--space-xxs);
+
+			.menu-bar {
+				display: block;
+				height: .15rem;
+				width: 1.25rem;
+				background-color: $color__text-main;
+				margin: var(--space-xxs);
+			}
+		}
+	}
+
+	.main-navigation.toggled .menu-toggle .menu-burger span {
+		&:first-child {
+			transform: translateY(calc(var(--space-xxs) + .15rem)) rotate(45deg);
+		}
+
+		&:nth-child(2) {
+			opacity: 0;
+		}
+
+		&:last-child {
+			transform: translateY(calc(var(--space-xxs) * -1 - .15rem)) rotate(-45deg);
+		}
 	}
 }
 
@@ -127,7 +162,8 @@
 		.main-navigation__arrow {
 			width: auto;
 			height: auto;
-			font-size: 1.25rem;
+			font-size: 1.5rem;
+			color: $color__brand-primary;
 			padding: var(--space-xxs);
 			opacity: 1;
 			transition: opacity ease .2s;
@@ -139,10 +175,22 @@
 		}
 
 		ul {
-			display: flex;
-	
-			&:not(.sub-menu) > * + * {
-				margin-left: var(--space-xl);
+			display: block;
+			
+			&:not(.sub-menu) {
+				display: flex;
+				
+				> * + * {
+					margin-left: var(--space-xl);
+				}
+			}
+			
+			ul {
+				float: left;
+				position: absolute;
+				top: 100%;
+				left: -999em;
+				z-index: 99999;
 			}
 		}
 	}
