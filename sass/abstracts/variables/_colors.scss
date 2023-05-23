@@ -1,8 +1,9 @@
-$color__brand-primary: #5E3C80;
+$color__brand-primary: #a0427e;
 $color__brand-primary-dark: scale-color($color__brand-primary, $lightness: -20%);
-$color__brand-primary-light: scale-color($color: $color__brand-primary, $lightness: 55%);
+$color__brand-primary-light: scale-color($color: $color__brand-primary, $lightness: 70%);
+$color__brand-primary-background: scale-color($color: $color__brand-primary, $lightness: 85%);
 
-$color__background: #dbb7f1;
+$color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: transparent;
