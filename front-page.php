@@ -77,8 +77,8 @@ get_header();
 			endif;
 			?>
 
-			<a href="<?php the_permalink( get_page_by_path( 'about-me' ) ); ?>" class="site-button">
-				<?php echo esc_html__( 'View Services In More Detail', 'allanahjohnson' ); ?>
+			<a href="<?php echo get_post_type_archive_link( 'service' ); ?>" class="site-button">
+				<?php echo esc_html__( 'Explore My Services', 'allanahjohnson' ); ?>
 			</a>
 
 		</main><!-- #main -->
