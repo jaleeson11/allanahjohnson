@@ -280,3 +280,11 @@ function allanahjonhson_disable_search( $query, $error = true ) {
 	}
 }
 add_action( 'parse_query', 'allanahjonhson_disable_search' ); 
+
+/**
+ * Replaces default login error message.
+ */
+function  allanahjonhson_login_error() {
+	return 'Your username or password is incorrect';
+}
+add_filter( 'login_errors', 'allanahjonhson_login_error' );
