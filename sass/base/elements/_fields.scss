@@ -19,6 +19,7 @@ textarea {
 	border-radius: .2rem;
 	padding: var(--space-sm);
 	background-color: #fff;
+	width: 100%;
 
 	&::placeholder {
 		color: $color__brand-primary-light;
@@ -30,7 +31,7 @@ textarea {
 
 	&:focus {
 		color: $color__text-input-focus;
-		outline: 4px solid $color__brand-primary;
+		outline: 2px solid $color__brand-primary;
 	}
 }
 
@@ -38,8 +39,4 @@ select {
 	border: none;
 	border-radius: .2rem;
 	padding: var(--space-sm);
-}
-
-textarea {
-	width: 100%;
 }
