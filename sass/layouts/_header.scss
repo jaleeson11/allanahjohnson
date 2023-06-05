@@ -1,6 +1,7 @@
 .custom-header {
     display: grid;
-    height: 100vh;
+    min-height: 100vh;
+    height: -webkit-fill-available;
     grid-template-rows: 1fr;
 
     .custom-header-image {
