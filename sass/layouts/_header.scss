@@ -1,7 +1,12 @@
-.custom-header {
-    display: grid;
+.site-header {
+    position: relative;
     height: 100vh;
     height: 100dvh;
+}
+
+.custom-header {
+    display: grid;
+    height: 100%;
     grid-template-rows: 1fr;
 
     .custom-header-image {
