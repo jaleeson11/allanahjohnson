@@ -2,48 +2,48 @@
     position: relative;
     height: 100vh;
     height: 100dvh;
-}
 
-.custom-header {
-    display: grid;
-    height: 100%;
-    grid-template-rows: 1fr;
-
-    .custom-header-image {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .custom-header {
+        display: grid;
         height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -1;
+        grid-template-rows: 1fr;
     
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
+        .custom-header-image {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             height: 100%;
-            background-color: $color__brand-primary-dark;
-            opacity: .3;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: $color__brand-primary-dark;
+                opacity: .3;
+            }
         }
-    }
-
-    .site-branding {
-        align-self: end;
-        padding-bottom: var(--space-lg);
-        margin-bottom: var(--space-xl);
-
-        .site-title,
-        .site-description {
-            margin: 0;
+    
+        .site-branding {
+            align-self: end;
+            padding-bottom: var(--space-lg);
+            margin-bottom: var(--space-xl);
+    
+            .site-title,
+            .site-description {
+                margin: 0;
+            }
         }
     }
 }
 
 @include media-breakpoint-up(md) {
-    .custom-header .site-branding .site-description {
+    .site-header .custom-header .site-branding .site-description {
         font-size: 1.25rem;
     }
 }
