@@ -308,3 +308,16 @@ function allanahjonhson_preload_fonts() {
 		<?php
 	}
 }
+
+/**
+ * Blocks reCAPTCHA on all pages apart from contact.
+ */
+function allanahjohnson_block_recaptcha() {
+	if ( ! is_page( array( 'contact' ) ) ) {
+		wp_dequeue_script( 'google-recaptcha' );
+		wp_deregister_script( 'google-recaptcha' );
+		add_filter( 'wpcf7_load_js', '__return_false' );
+		add_filter( 'wpcf7_load_css', '__return_false' );
+	}
+}
+add_action( 'wp_print_scripts', 'allanahjohnson_block_recaptcha' );
