@@ -60,14 +60,12 @@
 	}
 
 	a {
-		padding: var(--space-xs);
 		font-family: $font__secondary;
+		font-size: 1.25rem;
 		color: $color__text-main;
 
-		&:hover,
-		&:focus,
-		&:active {
-			color: $color__brand-primary;
+		&:hover {
+			text-decoration: none;
 		}
 	}
 
@@ -183,8 +181,30 @@
 			&:not(.sub-menu) {
 				display: flex;
 				
-				> * + * {
-					margin-left: var(--space-lg);
+				> li {
+					+ * {
+						margin-left: var(--space-xl);
+					}
+
+					> a {
+						@media (hover: hover) {
+							&::before {
+								content: '';
+								position: absolute;
+								transition: opacity .3s ease;
+								left: 0;
+								bottom: 0;
+								width: 100%;
+								height: 2px;
+								background-color: $color__brand-green-pale;
+								opacity: 0;
+							}
+
+							&:hover::before {
+								opacity: 1;
+							}
+						}
+					}
 				}
 			}
 			
