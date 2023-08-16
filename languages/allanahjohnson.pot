@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-05-18T09:39:50+02:00\n"
+"POT-Creation-Date: 2023-08-16T11:26:14+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: allanahjohnson\n"
@@ -34,21 +34,12 @@ msgstr ""
 msgid "https://joeleeson.com"
 msgstr ""
 
-#: 404.php:17
+#: 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:21
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
-msgstr ""
-
-#: 404.php:30
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: 404.php:48
-msgid "Try looking in the monthly archives. %1$s"
+#: 404.php:23
+msgid "It looks like nothing was found at this location."
 msgstr ""
 
 #. translators: 1: title.
@@ -68,18 +59,12 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:16
-msgid "https://wordpress.org/"
+#: front-page.php:81
+msgid "Explore My Services"
 msgstr ""
 
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:19
-msgid "Proudly powered by %s"
-msgstr ""
-
-#. translators: 1: Theme name, 2: Theme author.
-#: footer.php:25
-msgid "Theme: %1$s by %2$s."
+#: front-page.php:106
+msgid "More About Me"
 msgstr ""
 
 #: functions.php:52
@@ -87,19 +72,24 @@ msgid "Primary"
 msgstr ""
 
 #: functions.php:125
-msgid "Sidebar"
+msgid "Footer Column 1"
 msgstr ""
 
 #: functions.php:127
+#: functions.php:138
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:26
+#: functions.php:136
+msgid "Footer Column 2"
+msgstr ""
+
+#: header.php:34
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:49
-msgid "Primary Menu"
+#: header.php:80
+msgid "Menu"
 msgstr ""
 
 #. translators: %s: post date.
@@ -142,7 +132,7 @@ msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:100
-#: template-parts/content-page.php:39
+#: template-parts/content-page.php:43
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
@@ -151,11 +141,11 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: single.php:23
+#: single.php:24
 msgid "Previous:"
 msgstr ""
 
-#: single.php:24
+#: single.php:25
 msgid "Next:"
 msgstr ""
 
@@ -176,12 +166,12 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:25
-#: template-parts/content.php:53
+#: template-parts/content-page.php:28
+#: template-parts/content.php:55
 msgid "Pages:"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:40
+#: template-parts/content.php:42
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
