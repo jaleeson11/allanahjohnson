@@ -76,7 +76,7 @@
 	}
 }
 
-@media screen and (max-width: 37.5em) {
+@include media-breakpoint-down(md) {
 	/* Small menu. */
 	.main-navigation {
 		&.toggled {
@@ -140,7 +140,7 @@
 	}
 }
 
-@media screen and (min-width: 37.5em) {
+@include media-breakpoint-up(md) {
 
 	.menu-toggle {
 		display: none;
