@@ -4,9 +4,7 @@
     height: 100dvh;
 
     .custom-header {
-        display: grid;
         height: 100%;
-        grid-template-rows: 1fr;
         position: relative;
         z-index: -2;
         background-color: #fcf3e4;
@@ -32,12 +30,17 @@
         }
     
         .site-branding {
-            align-self: start;
+            position: fixed;
+            width: 100%;
             margin-top: var(--space-lg);
     
             .site-title,
             .site-description {
                 margin: 0;
+            }
+
+            .site-description {
+                max-width: 30rem;
             }
         }
     }
