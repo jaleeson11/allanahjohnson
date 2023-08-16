@@ -22,7 +22,7 @@ textarea {
 	width: 100%;
 
 	&::placeholder {
-		color: $color__brand-primary-light;
+		color: $color__brand-green-pale;
 	}
 
 	&:focus:not(:focus-visible) {
@@ -31,7 +31,7 @@ textarea {
 
 	&:focus {
 		color: $color__text-input-focus;
-		outline: 2px solid $color__brand-primary;
+		outline: 2px solid $color__brand-green-dark;
 	}
 }
 

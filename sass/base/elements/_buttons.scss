@@ -6,21 +6,23 @@ input[type="submit"],
 	border-radius: 100px;
 	border: 2px solid;
 	border-color: $color__border-button;
-	background: $color__background-button;
+	background-color: $color__background-button;
 	color: $color__text-main;
 	line-height: 1.15;
-	font-family: 'DMSans-Bold';
+	font-family: $font__secondary;
+	font-size: 1.25rem;
 	text-align: center;
 	padding: var(--space-sm) var(--space-md);
 	min-width: 10ch;	
 	min-height: 2.5rem;
 	cursor: pointer;
 	touch-action: manipulation;
-	transition: color ease .2s;
+	transition: all ease .2s;
 
 	&:hover {
-		border-color: $color__border-button-hover;
-		color: $color__brand-primary;
+		background-color: $color__brand-beige;
+		color: $color__brand-green-dark;
+		text-decoration: none;
 	}
 
 	&:focus:not(:focus-visible) {
@@ -29,7 +31,7 @@ input[type="submit"],
 
 	&:active,
 	&:focus {
-		outline: 2px solid $color__outline-button-focus;
+		outline: 2px dotted $color__outline-button-focus;
 		outline-offset: 2px;
 	}
 }

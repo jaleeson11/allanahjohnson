@@ -1,7 +1,7 @@
 .site-footer {
     padding-top: var(--space-xl);
-    background-color: $color__brand-primary-background;
-    border-top: thin solid $color__brand-primary-light;
+    background-color: $color__brand-green-pale;
+    border-top: thin solid scale-color($color__brand-green-pale, $lightness: -10%);
 
     .site-footer__col {
         + * {
