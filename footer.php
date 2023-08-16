@@ -22,14 +22,14 @@
 					<?php dynamic_sidebar( 'sidebar-footer-2' ); ?>
 				</div>
 			</div>
-			<span class="site-footer__copyright">
+			<small class="site-footer__copyright">
 				<?php
 				echo esc_html( '&copy; Copyright ' );
 				echo esc_html( date( 'Y ' ) );
 				echo esc_html( get_option( 'blogname' ) );
 				echo esc_html( '. All Rights Reserved' );
 				?>
-			</span><!-- .site-copyright -->
+			</small><!-- .site-copyright -->
 		</div><!-- .container -->
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
