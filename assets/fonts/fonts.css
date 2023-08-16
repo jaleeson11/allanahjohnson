@@ -27,15 +27,8 @@
 }
 
 @font-face {
-    font-family: 'DMSerifDisplay-Regular';
-    src: url('DMSerifDisplay-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'DMSerifDisplay-Italic';
-    src: url('DMSerifDisplay-Italic.woff') format('woff');
+    font-family: 'Caveat-Regular';
+    src: url('Caveat-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

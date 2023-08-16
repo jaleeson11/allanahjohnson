@@ -298,8 +298,7 @@ function allanahjonhson_preload_fonts() {
 		'DMSans-Medium',
 		'DMSans-Bold',
 		'DMSans-Italic',
-		'DMSerifDisplay-Regular',
-		'DMSerifDisplay-Italic',
+		'Caveat-Regular',
 	];
 
 	foreach ($fonts as $font) {
