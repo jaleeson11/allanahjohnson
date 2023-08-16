@@ -100,7 +100,7 @@ get_header();
 					<?php echo esc_html_e( get_theme_mod( 'bio_heading', allanahjohnson_theme_defaults( 'bio_heading' ) ), 'allanahjohnson' ); ?>
 				</h2>
 				<p class="bio__intro">
-					<?php echo esc_attr_e( get_theme_mod( 'bio_intro', allanahjohnson_theme_defaults( 'bio_intro' ) ), 'allanahjohnson' ); ?>
+					<?php echo esc_html_e( get_theme_mod( 'bio_intro', allanahjohnson_theme_defaults( 'bio_intro' ) ), 'allanahjohnson' ); ?>
 				</p>
 				<a href="<?php the_permalink( get_page_by_path( 'about-me' ) ); ?>" class="site-button">
 					<?php echo esc_html_e( 'More About Me', 'allanahjohnson' ); ?>
