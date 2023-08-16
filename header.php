@@ -37,13 +37,13 @@
 		<div class="custom-header">
 			<?php
 			$header_image  = get_header_image();
-			$default_image = get_template_directory_uri() . '/assets/images/custom-header-default.jpg';
+			$default_image = get_template_directory_uri() . '/assets/images/custom-header-default.png';
 
 			if ( ! empty( $header_image ) ) :
 				?>
 				<div class="custom-header-image" style="background-image: url(<?php echo esc_url( $header_image ); ?>);"></div><!-- .custom-header-image -->
 				<?php else : ?>
-				<div class="custom-header-image" style="background-image: url(<?php echo esc_url( $default_image ); ?>);"></div><!-- .custom-header-image -->
+				<img class="custom-header-image custom-header-image--tree" src="<?php echo esc_url( $default_image ); ?>" alt="" /><!-- .custom-header-image -->
 			<?php endif; ?>
 
 			<div class="site-branding">

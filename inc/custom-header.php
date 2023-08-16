@@ -23,7 +23,7 @@ function allanahjohnson_custom_header_setup() {
 			'allanahjohnson_custom_header_args',
 			array(
 				'default-image'      => '',
-				'default-text-color' => 'FFFFFF',
+				'default-text-color' => '527032',
 				'width'              => 1200,
 				'height'             => 500,
 				'flex-height'        => true,
@@ -47,9 +47,9 @@ if ( ! function_exists( 'allanahjohnson_header_style' ) ) :
 		 * If no custom options for text are set, let's bail.
 		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
 		 */
-		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
-			return;
-		}
+		// if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
+		// 	return;
+		// }
 
 		// If we get this far, we have custom styles. Let's do this.
 		?>
