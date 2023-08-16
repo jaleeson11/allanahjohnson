@@ -99,7 +99,7 @@ function allanahjohnson_custom_sections( $wp_customize ) {
 	$wp_customize->add_setting(
 		'bio_heading',
 		array(
-			'default'           => 'Hi There!',
+			'default'           => allanahjohnson_theme_defaults( 'bio_heading' ),
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
@@ -119,8 +119,7 @@ function allanahjohnson_custom_sections( $wp_customize ) {
 	$wp_customize->add_setting(
 		'bio_intro',
 		array(
-			'default'           => 'I\'m Allanah, a dedicated psychotherapist and counsellor specializing in working with children and adolescents. With a passion for nurturing young minds and guiding them towards emotional well-being, I am here to provide compassionate support and guidance during their unique journeys.',
-			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => allanahjohnson_theme_defaults( 'bio_intro' ),
 		)
 	);
 

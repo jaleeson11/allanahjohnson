@@ -321,3 +321,15 @@ function allanahjohnson_block_recaptcha() {
 	}
 }
 add_action( 'wp_print_scripts', 'allanahjohnson_block_recaptcha' );
+
+/**
+ * Theme defaults.
+ */
+function allanahjohnson_theme_defaults( $setting ) {
+	$defaults = array(
+		'bio_heading'     => 'Welcome',
+		'bio_intro' 	   => 'Hi, my name is Allanah, I am an Integrative Counsellor and Psychotherapist who specialises in working with children, adolescents, and their families. I have a passion for nurturing young minds and offering support through challenging life events towards emotional wellbeing by providing a safe and therapeutic space to enable children and adolescents to tell their own unique stories.',
+	);
+
+	return $defaults[$setting];
+}

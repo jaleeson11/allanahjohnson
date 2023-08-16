@@ -6,32 +6,11 @@
     max-width: 100%;
     margin-bottom: calc(var(--space-lg) * 2);
 
-    &__image,
-    &__image-placeholder {
+    &__image {
         width: 11.5rem;
         height: 11.5rem;
         border-radius: 50%;
-    }
-
-    &__image {
         object-fit: cover;
-    }
-
-    &__image-placeholder {
-        display: block;
-        position: relative;
-        border-radius: 50%;
-        background-color: $color__brand-primary-light;
-
-        &::before {
-            content: '\f110';
-            font-family: 'Dashicons';
-            font-size: 6.5rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
     }
 
     &__heading {
@@ -41,15 +20,14 @@
     &__intro {
         margin-top: 0;
         margin-bottom: var(--space-lg);
-        font-family: 'DMSans-Italic';
     }
 }
 
 @include media-breakpoint-up(md) {
     .bio {
         max-width: 19rem;
-        padding: var(--space-lg) var(--space-sm);
-        border: thin solid $color__brand-primary-light;
+        padding: var(--space-lg) var(--space-md);
+        border: thin solid scale-color($color__brand-green-pale, $lightness: -10%);
         border-radius: 1.5rem;
 
         &__intro {
