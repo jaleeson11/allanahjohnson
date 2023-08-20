@@ -1,41 +1,19 @@
 .site-footer {
+    position: relative;
+    z-index: 1;
     padding-top: var(--space-xl);
     background-color: $color__brand-green-pale;
     border-top: thin solid scale-color($color__brand-green-pale, $lightness: -10%);
+    text-align: center;
 
-    .site-footer__col {
-        + * {
-            margin-top: var(--space-xl);
-        }
-
-        .wp-block-heading {
-            margin-top: 0;
-            font-size: var(--font-size-h4);
-        }
+    .wp-block-heading {
+        margin-top: 0;
+        font-size: var(--font-size-h4);
     }
 
     .site-footer__copyright {
         display: block;
         text-align: center;
         padding: var(--space-lg) 0 var(--space-sm);
-    }
-}
-
-@include media-breakpoint-up(md) {
-	.site-footer {
-        padding-top: var(--space-xxl);
-
-        .site-footer__inner {
-            display: flex;
-            justify-content: space-between;
-
-            .site-footer__col {
-                flex: 1;
-                
-                + * {
-                    margin-top: 0;
-                }
-            }
-        }
     }
 }

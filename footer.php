@@ -14,14 +14,7 @@
 
 	<footer class="site-footer">
 		<div class="container">
-			<div class="site-footer__inner">
-				<div class="site-footer__col">
-					<?php dynamic_sidebar( 'sidebar-footer-1' ); ?>
-				</div>
-				<div class="site-footer__col">
-					<?php dynamic_sidebar( 'sidebar-footer-2' ); ?>
-				</div>
-			</div>
+			<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 			<small class="site-footer__copyright">
 				<?php
 				echo esc_html( '&copy; Copyright ' );
