@@ -184,24 +184,12 @@ require get_template_directory() . '/inc/customizer.php';
  * Redirects.
  */
 function allanahjohnson_redirect() {
-	if ( is_author() || is_tag() || is_attachment() || is_category() ) {
+	if ( is_author() || is_archive() ) {
 		wp_safe_redirect( home_url(), 301 );
 		exit;
 	}
 }
 add_action( 'template_redirect', 'allanahjohnson_redirect' );
-
-/**
- * Modifies archive title.
- */
-function allanahjohnson_archive_title() {
-	if ( is_post_type_archive() ) {
-		$title = post_type_archive_title( '', false );
-	}
-
-	return $title;
-}
-add_filter( 'get_the_archive_title', 'allanahjohnson_archive_title' );
 
 /**
  * Adds ellipses to end of post excerpt.
@@ -324,3 +312,19 @@ function allanahjohnson_theme_defaults( $setting ) {
 
 	return $defaults[$setting];
 }
+
+/**
+ * Disable tags.
+ */
+function allanahjohnson_disable_tags() {
+    unregister_taxonomy_for_object_type( 'post_tag', 'post' );
+}
+add_action('init', 'allanahjohnson_disable_tags');
+
+/**
+ * Disable categories.
+ */
+function allanahjohnson_disable_categories() {
+    unregister_taxonomy_for_object_type( 'category', 'post' );
+}
+add_action('init', 'allanahjohnson_disable_categories');
