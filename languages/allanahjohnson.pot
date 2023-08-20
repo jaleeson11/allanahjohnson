@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-08-16T11:26:14+02:00\n"
+"POT-Creation-Date: 2023-08-20T12:06:31+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: allanahjohnson\n"
@@ -59,11 +59,11 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: front-page.php:81
-msgid "Explore My Services"
+#: front-page.php:74
+msgid "Learn More About My Processes"
 msgstr ""
 
-#: front-page.php:106
+#: front-page.php:105
 msgid "More About Me"
 msgstr ""
 
@@ -71,17 +71,12 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:125
-msgid "Footer Column 1"
+#: functions.php:128
+msgid "Footer"
 msgstr ""
 
-#: functions.php:127
-#: functions.php:138
+#: functions.php:130
 msgid "Add widgets here."
-msgstr ""
-
-#: functions.php:136
-msgid "Footer Column 2"
 msgstr ""
 
 #: header.php:34
