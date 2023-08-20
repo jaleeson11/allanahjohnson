@@ -99,6 +99,9 @@ function allanahjohnson_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	// Add page support for excerpt.
+	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'after_setup_theme', 'allanahjohnson_setup' );
 
