@@ -5,8 +5,6 @@
 
     .custom-header {
         height: 100%;
-        position: relative;
-        z-index: -2;
         background-color: #fcf3e4;
     
         .custom-header-image {
@@ -25,7 +23,6 @@
                 bottom: 0;
                 background: none;
                 margin-bottom: var(--space-xl);
-                z-index: -1;
             }
         }
     
@@ -37,6 +34,10 @@
             .site-title,
             .site-description {
                 margin: 0;
+            }
+
+            .site-title a {
+                text-decoration: none;
             }
 
             .site-description {
