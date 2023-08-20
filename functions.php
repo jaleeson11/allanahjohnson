@@ -184,7 +184,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Redirects.
  */
 function allanahjohnson_redirect() {
-	if ( is_author() || is_tag() || is_attachment() || is_singular( 'service' ) || is_category() ) {
+	if ( is_author() || is_tag() || is_attachment() || is_category() ) {
 		wp_safe_redirect( home_url(), 301 );
 		exit;
 	}
