@@ -287,10 +287,10 @@ add_filter( 'login_errors', 'allanahjonhson_login_error' );
 function allanahjonhson_preload_fonts() {
 	$fonts = [
 		'DMSans-Regular',
+		'Caveat-Regular',
 		'DMSans-Medium',
 		'DMSans-Bold',
 		'DMSans-Italic',
-		'Caveat-Regular',
 	];
 
 	foreach ($fonts as $font) {
