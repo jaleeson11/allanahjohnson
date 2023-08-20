@@ -51,16 +51,16 @@ get_header();
 
 			endif;
 
-			$services = new WP_Query(
+			$howIWork = new WP_Query(
 				array(
-					'post_type'		 => 'service',
-					'posts_per_page' => '3',
+					'post_type'		 => 'page',
+					'pagename' => 'how-i-work',
 				)
 			);
 
-			if ( $services->have_posts() ) :
-				while ( $services->have_posts() ) :
-					$services->the_post();
+			if ( $howIWork->have_posts() ) :
+				while ( $howIWork->have_posts() ) :
+					$howIWork->the_post();
 					?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -70,16 +70,15 @@ get_header();
 
 						<div class="entry-content">
 							<?php the_excerpt( '<p class="entry-excerpt">', '</p>' ); ?>
+							<a href="<?php echo get_permalink( get_page_by_path( 'how-i-work' ) ); ?>" class="site-button">
+								<?php echo esc_html__( 'Learn More About My Processes', 'allanahjohnson' ); ?>
+							</a>
 						</div><!-- .entry-content -->
 					</article><!-- #post-<?php the_ID(); ?> -->
 					<?php
 				endwhile;
 			endif;
 			?>
-
-			<a href="<?php echo get_post_type_archive_link( 'service' ); ?>" class="site-button">
-				<?php echo esc_html__( 'Explore My Services', 'allanahjohnson' ); ?>
-			</a>
 
 		</main><!-- #main -->
 
@@ -96,7 +95,7 @@ get_header();
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/bio-default.jpg' ); ?>" alt="Portrait of Allanah with a warm smile" class="bio__image">
 				<?php endif; ?>
 				
-				<h2 class="bio__heading h3">
+				<h2 class="bio__heading">
 					<?php echo esc_html_e( get_theme_mod( 'bio_heading', allanahjohnson_theme_defaults( 'bio_heading' ) ), 'allanahjohnson' ); ?>
 				</h2>
 				<p class="bio__intro">
